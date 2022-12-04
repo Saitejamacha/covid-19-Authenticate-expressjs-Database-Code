@@ -1,0 +1,86 @@
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "britlee",
+  "name": "britlee",
+  "password": "superfast",
+  "gender": "male",
+  "location": "Australia"
+}
+###
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "britlee",
+  "password": "superfast"
+
+}
+###
+
+//API 2 Getting all state
+GET http://localhost:3000/states/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaXRsZWUiLCJpYXQiOjE2NzAxNDk4ODV9.mUcfiNZ8QIO4TIO32_nXdfxpAPs4ZbII7mUTQNIgMMQ
+  
+###
+
+//API 3 Getting Particular state based on State_iD
+GET http://localhost:3000/states/2/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaXRsZWUiLCJpYXQiOjE2NzAxNDk4ODV9.mUcfiNZ8QIO4TIO32_nXdfxpAPs4ZbII7mUTQNIgMMQ
+###
+
+//API 4 createing district
+POST http://localhost:3000/districts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaXRsZWUiLCJpYXQiOjE2NzAxNDk4ODV9.mUcfiNZ8QIO4TIO32_nXdfxpAPs4ZbII7mUTQNIgMMQ
+
+{
+  "districtName": "teja state",
+  "stateId": 18,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 448
+}
+
+###
+
+//API 5 getting district based on district_id
+GET http://localhost:3000/districts/322/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaXRsZWUiLCJpYXQiOjE2NzAxNDk4ODV9.mUcfiNZ8QIO4TIO32_nXdfxpAPs4ZbII7mUTQNIgMMQ
+###
+
+
+//API 6 Removing district from district table
+DELETE http://localhost:3000/districts/320/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaXRsZWUiLCJpYXQiOjE2NzAxNDk4ODV9.mUcfiNZ8QIO4TIO32_nXdfxpAPs4ZbII7mUTQNIgMMQ
+###
+
+
+//API 7 Update the district based on the district_id
+PUT http://localhost:3000/districts/322/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaXRsZWUiLCJpYXQiOjE2NzAxNDk4ODV9.mUcfiNZ8QIO4TIO32_nXdfxpAPs4ZbII7mUTQNIgMMQ
+Content-Type: application/json
+
+{
+  "districtName": "Sri teja District",
+  "stateId": 18,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 448
+}
+
+###
+
+
+
+
+//API 8 Getting Statistics of Sarticular state
+GET http://localhost:3000/states/2/stats/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaXRsZWUiLCJpYXQiOjE2NzAxNDk4ODV9.mUcfiNZ8QIO4TIO32_nXdfxpAPs4ZbII7mUTQNIgMMQ
+###
+
+
